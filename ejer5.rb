@@ -5,18 +5,11 @@ class Morseable
   end
 
   def generate_hash(number)
-    case number
-    when 0 then '-----'
-    when 1 then '.----'
-    when 2 then '..---'
-    when 3 then '...--'
-    when 4 then '....-'
-    when 5 then '.....'
-    when 6 then '-....'
-    when 7 then '--...'
-    when 8 then '---..'
-    when 9 then '----.'
-    end
+    hash = {
+      0 => '-----', 1 => '.----', 2 => '..---', 3 => '...--', 4 => '....-',
+      5 => '.....', 6 => '-....', 7 => '--...', 8 => '---..', 9 => '----.'
+    }
+    hash[number]
   end
 
   def to_morse
